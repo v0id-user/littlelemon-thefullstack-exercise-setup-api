@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>Make a reservation</h1>
+<form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Book</button>
+</form>
+
+<script>
+    console.log("Hello");
+    document.getElementById("id_reservation_date").type="date";
+</script>
+{% endblock %}
+
